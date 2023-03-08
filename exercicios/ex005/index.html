@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body {
+            background-color: rgba(92, 88, 169, 0.937);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: rgba(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <!--Alguns tipos de operadores:
+        -Aritméticos
+        -atribuição
+        -relacionais
+        -lógicos
+        -ternário
+    -->
+    <h1>Teste de operadores</h1>
+    <script>
+        /* operador ternário é composto pelo '?' e ':'
+            -teste ? true : false
+            se o teste for verdadeiro, retorna o que está em true, caso contrário retorna o que está em false.
+        */
+       var aluno = 'Jairo'
+       var media = 7.5
+       var situação = media >= 7 ? 'Aprovado!' : 'Reprovado'
+       document.write(`O aluno ${aluno} de média ${media} está ${situação}`)
+    </script>
+</body>
+</html>

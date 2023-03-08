@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+    <style>
+        body {
+            background-color: rgba(92, 88, 169, 0.937);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: rgba(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Introdução ao DOM</h1>
+    <!--DOM significa "Document Object Model":
+        -Conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos ao website.
+        -Árvore DOM
+    -->
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a utilizar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">
+        Clique em mim
+    </div>
+    <script>
+        /* Existem formas de acessar os elementos no html através do DOM. Algumas delas são:
+            -Por Marca (tags) 
+                => getElementsByTagName()
+            -Por ID
+                => getElementById()
+            -Por Nome
+                => getElementsByName()
+            -Por Classe
+                => getElementsByClassName()
+            -Por Seletor
+                => querySelector()
+                => querySelectorAll()
+        */
+        var p1 = document.getElementsByTagName('p')[0] // Usar o colchete dessa forma indica pegar o primeiro elemento 
+        p1.style.color = 'blue'
+        window.document.write(`Está escrito assim o primeiro parágrafo : ${p1.innerHTML}`)
+        /*
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+       var d = window.document.querySelector('div#msg')
+       d.style.color = 'white'
+       d.style.background = 'blue'
+    </script>
+    
+</body>
+</html>

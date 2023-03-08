@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando strings</title>
+    <style>
+        body {
+            background-color: rgba(92, 88, 169, 0.937);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            color: rgba(255, 212, 22);
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatando strings e números</h1>
+    <script>
+        /* Alguns comandos para formatação de strings:
+            -s.length  (retorna quantos caracteres a string tem)
+            -s.toUpperCase() (Tudo para maiúsculas)
+            -s.toLowerCase() (Tudo para minúsculas)
+        */
+       var nome = prompt('Qual seu nome?')
+       var valor = Number(prompt('Qual seu sálario?'))
+       document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras <br>`)
+       document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()} <br>`)
+       /* Alguns comandos para formatação de números:
+            - n.toFixed(x) (Acessa x casas decimais de um número )
+            - n.replace('.',',') (Troca o ponto pela vírgula)
+
+        Existe também um comando que pode mostrar em formato monetário. Basta informar o local desejado do mundo:
+            - n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        */
+       var salario = valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+       document.write(`Seu salário é de ${salario}`)
+    </script>
+</body>
+</html>

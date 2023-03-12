@@ -14,13 +14,21 @@
                 <h1>Verificador de Idade</h1>
             </header>
             <section>
-                <label for="">Ano de Nascimento</label>
-                <input type="number" name="idade" id="iidade"> <br>
-                Sexo:
-                <input type="radio" name="sexo" id="imas" class="radio"> <label for="imas">Masculino</label>
-                <input type="radio" name="sexo" id="ifem" class="radio"><label for="ifem">Feminino</label> <br>
-                <input type="button" onclick="idade()" value="Verificar" class="botao">
-                <p>Preenche os dados acima para verificar!</p>
+                <div>
+                    <label for="iidade">Ano de Nascimento</label>
+                    <input type="number" name="idade" id="iidade">
+                </div>
+                <div>
+                    Sexo:
+                    <input type="radio" name="sexo" id="imas" class="radio" checked> <label for="imas">Masculino</label>
+                    <input type="radio" name="sexo" id="ifem" class="radio"><label for="ifem">Feminino</label>
+                </div>
+                <div>
+                    <input type="button" onclick="idade()" value="Verificar" class="botao">
+                </div>
+                <div class="res">
+                    <p class="img">Preencha os dados acima para verificar!</p>
+                </div>
             </section>
             <footer>
                 <p>&copy; <strong>Feito por Jairo Magno</strong></p>

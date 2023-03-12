@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de voto</title>
+</head>
+<body>
+    <h1>Verificação da obrigatoriedade de voto</h1>
+    <label for="iidade">Informe sua Idade: </label>
+    <input type="number" name="idade" id="iidade" required>
+    <input type="button" value="verificar" onclick="Registro()">
+    <div class="voto">
+
+    </div>
+
+    <script>
+        function Registro(){
+            idade = Number(document.getElementById('iidade').value)
+            voto = document.querySelector('div.voto')
+
+            if (idade < 16) {
+                voto.innerHTML = '<p>Você é menor de idade e não vota</p>'
+            } else if (idade >= 16 && idade < 18) {
+                voto.innerHTML = '<p>Você é menor de idade com voto opcional</p>'
+            } else if (idade >= 18 && idade < 65) {
+                voto.innerHTML = '<p>Você é maior de idade e possui voto obrigatório</p>'
+            } else {
+                voto.innerHTML = '<p>Você é idoso e possui voto <strong>opcional</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>

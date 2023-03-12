@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Sistemas de multa</h1>
+    <label for="itxtvel">
+        Velocidade do Carro: 
+    </label>
+    <input type="number" name="txtvel" id="itxtvel" required autocomplete="on"> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div class="verificar"></div>
+
+    <script>
+        function calcular() {
+
+            var vel = Number(document.querySelector('input#itxtvel').value)
+            var verificar = document.querySelector('div.verificar')
+
+            if (vel > 60) {
+                verificar.innerHTML = `<p>Velocidades acima de 60Km/h <strong>NÃO<\strong> são permitidas! Como seu carro está a <strong>${vel}</strong>Km/h, você será <strong>MULTADO</strong>!!</p>`
+            } else {
+                verificar.innerHTML = `<p>Sua velocidade de <strong>${vel}</strong>Km/h está dentro dos valores permitidos da via.</p>`
+            }
+            verificar.innerHTML += '<p>Dirija sempre com segurança.</p>'
+        }
+    </script>
+</body>
+</html>

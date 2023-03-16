@@ -21,7 +21,7 @@ function analisador() {
     }
 
     numero.value = ''
-    numero.focus() //Toda vez que eu digito e dou submit, o número sair da caixa de input. Assim o usuário n precisa sempre ficar apagando
+    numero.focus() //Toda vez que eu digito e dou submit, o número sai da caixa de input. Assim o usuário n precisa sempre ficar apagando
 }
 
 function finalizar() {

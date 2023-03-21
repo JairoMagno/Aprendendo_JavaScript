@@ -9,8 +9,6 @@ function fnCapitalizar(colecao, atributo) {
             
             return obj
         })
-
-        console.log(resultado)
     } else {
 
         var resultado = colecao.map(function(posicao){
@@ -21,9 +19,9 @@ function fnCapitalizar(colecao, atributo) {
             
             return posicao //Retornado novo vetor armazenando a letral inicial capitalizada
         })
-
-        console.log(resultado)
     }
+
+    return resultado
 }
 
 
@@ -34,16 +32,14 @@ function fnOrdenar(vetor, atributo) {
         var ordenado = vetor.sort(function(a,b){
             return a[atributo].localeCompare(b[atributo]) 
         })
-
-        console.log(ordenado)
     } else {
 
         var ordenado = vetor.sort(function(a,b){
             return a.localeCompare(b) //Os dois parâmetros são textos que se comparam. Com o localeCompare, a região ou linguagem da máquina é utilizada, e assim a acentuação também é.
         })
-
-        console.log(ordenado)
     }
+
+    return ordenado
 }
 
 function fnCaixaAlta(colecao, atributo) {
@@ -56,8 +52,6 @@ function fnCaixaAlta(colecao, atributo) {
 
             return obj
         })
-
-        console.log(maiúsculas)
     } else {
         var maiúsculas = colecao.map(function(obj){
             var caixaAlta = obj.toUpperCase()
@@ -65,9 +59,9 @@ function fnCaixaAlta(colecao, atributo) {
 
             return obj
         })
-
-        console.log(maiúsculas)
     }
+
+    return maiúsculas
 }
 
 //Só podemos declarar uma exportação padrão (default). Podemos exportar um objeto que encapsula funcionalidades.
